@@ -4,32 +4,34 @@ Imports System.Text.RegularExpressions
 
 Public Class Form2
 
-    Dim conn As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\user\Documents\OMC_UserDatabase.accdb")
+    Dim dbPath As String = Application.StartupPath & "\OMC_UserDatabase.accdb"
+    Dim conn As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & dbPath)
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
-        conn.Open()
+        conn.Open
 
         Dim message = ""
 
         'checks if field is filled up
         If TextBox1.Text = "" Or TextBox2.Text = "" Or TextBox3.Text = "" Then
             MsgBox("Please fill in all fields.")
-            conn.Close()
+            conn.Close
             Exit Sub ' stop the registration process
         End If
 
-        Dim timenow As Date = Date.Now
+        Dim timenow = Date.Now
         If DateTimePicker1.Value >= timenow Then
             MsgBox("Please select your date of birth.")
-            conn.Close()
+            conn.Close
             Exit Sub
         End If
 
         'mnakes sure email is in the correct format
-        Dim emailPattern As String = "^[^@\s]+@[^@\s]+\.[^@\s]+$"
+        Dim emailPattern = "^[^@\s]+@[^@\s]+\.[^@\s]+$"
         If Not Regex.IsMatch(TextBox2.Text, emailPattern) Then
             MsgBox("Please enter a valid email address.")
-            conn.Close()
+            conn.Close
             Exit Sub
         End If
 
@@ -42,7 +44,7 @@ Public Class Form2
         If reader1.HasRows Then
             message = "This username is already taken"
         End If
-        reader1.Close()
+        reader1.Close
 
         'checls if email already exist
         Dim emailchk As New OleDbCommand("SELECT Email FROM Users WHERE Email = ?", conn)
@@ -51,7 +53,7 @@ Public Class Form2
         If reader2.HasRows Then
             message = "This Email already exist"
         End If
-        reader2.Close()
+        reader2.Close
 
         'checks if password already exist
         Dim passchk As New OleDbCommand("SELECT [Password] FROM Users WHERE [Password] = ?", conn)
@@ -60,7 +62,7 @@ Public Class Form2
         If reader3.HasRows Then
             message = "This Password is already taken"
         End If
-        reader3.Close()
+        reader3.Close
 
         If message <> "" Then
             MsgBox(message)
@@ -71,20 +73,20 @@ Public Class Form2
             registercmd.Parameters.Add("Email", OleDbType.VarChar).Value = TextBox2.Text
             registercmd.Parameters.Add("Password", OleDbType.VarChar).Value = TextBox3.Text
             registercmd.Parameters.Add("DateOfBirth", OleDbType.Date).Value = DateTimePicker1.Value.Date
-            registercmd.ExecuteNonQuery()
+            registercmd.ExecuteNonQuery
 
             MsgBox("Registration Successful!")
 
-            TextBox1.Clear()
-            TextBox2.Clear()
-            TextBox3.Clear()
+            TextBox1.Clear
+            TextBox2.Clear
+            TextBox3.Clear
             DateTimePicker1.Value = Date.Now
 
-            Hide()
-            Form1.Show()
+            Hide
+            Form1.Show
         End If
 
-        conn.Close()
+        conn.Close
     End Sub
 
     Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
@@ -93,5 +95,10 @@ Public Class Form2
         Else
             TextBox3.PasswordChar = "*"c
         End If
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Form1.Show()
+        Me.Hide()
     End Sub
 End Class

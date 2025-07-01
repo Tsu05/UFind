@@ -33,6 +33,7 @@ Partial Class Form2
         Label5 = New Label()
         DateTimePicker1 = New DateTimePicker()
         CheckBox1 = New CheckBox()
+        Button2 = New Button()
         SuspendLayout()
         ' 
         ' Label1
@@ -69,7 +70,7 @@ Partial Class Form2
         ' 
         ' Button1
         ' 
-        Button1.Location = New Point(318, 382)
+        Button1.Location = New Point(325, 356)
         Button1.Name = "Button1"
         Button1.Size = New Size(126, 34)
         Button1.TabIndex = 5
@@ -129,11 +130,21 @@ Partial Class Form2
         CheckBox1.Text = "show password"
         CheckBox1.UseVisualStyleBackColor = True
         ' 
+        ' Button2
+        ' 
+        Button2.Location = New Point(325, 396)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(126, 34)
+        Button2.TabIndex = 12
+        Button2.Text = "return"
+        Button2.UseVisualStyleBackColor = True
+        ' 
         ' Form2
         ' 
         AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 450)
+        Controls.Add(Button2)
         Controls.Add(CheckBox1)
         Controls.Add(DateTimePicker1)
         Controls.Add(Label5)
@@ -162,4 +173,5 @@ Partial Class Form2
     Friend WithEvents Label5 As Label
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents Button2 As Button
 End Class

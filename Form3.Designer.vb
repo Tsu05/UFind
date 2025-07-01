@@ -26,6 +26,7 @@ Partial Class Form3
         TextBox1 = New TextBox()
         Label2 = New Label()
         Button1 = New Button()
+        Button2 = New Button()
         SuspendLayout()
         ' 
         ' Label1
@@ -50,9 +51,9 @@ Partial Class Form3
         Label2.AutoSize = True
         Label2.Location = New Point(169, 179)
         Label2.Name = "Label2"
-        Label2.Size = New Size(54, 25)
+        Label2.Size = New Size(89, 25)
         Label2.TabIndex = 2
-        Label2.Text = "email"
+        Label2.Text = "username"
         ' 
         ' Button1
         ' 
@@ -63,11 +64,21 @@ Partial Class Form3
         Button1.Text = "submit"
         Button1.UseVisualStyleBackColor = True
         ' 
+        ' Button2
+        ' 
+        Button2.Location = New Point(318, 332)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(104, 43)
+        Button2.TabIndex = 4
+        Button2.Text = "return"
+        Button2.UseVisualStyleBackColor = True
+        ' 
         ' Form3
         ' 
         AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 450)
+        Controls.Add(Button2)
         Controls.Add(Button1)
         Controls.Add(Label2)
         Controls.Add(TextBox1)
@@ -82,4 +93,5 @@ Partial Class Form3
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
 End Class

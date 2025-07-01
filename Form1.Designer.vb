@@ -30,6 +30,7 @@ Partial Class Form1
         Label3 = New Label()
         Button2 = New Button()
         Button3 = New Button()
+        CheckBox1 = New CheckBox()
         SuspendLayout()
         ' 
         ' Label1
@@ -53,6 +54,7 @@ Partial Class Form1
         ' 
         TextBox2.Location = New Point(252, 255)
         TextBox2.Name = "TextBox2"
+        TextBox2.PasswordChar = "*"c
         TextBox2.Size = New Size(267, 31)
         TextBox2.TabIndex = 2
         ' 
@@ -101,11 +103,22 @@ Partial Class Form1
         Button3.Text = "sign up"
         Button3.UseVisualStyleBackColor = True
         ' 
+        ' CheckBox1
+        ' 
+        CheckBox1.AutoSize = True
+        CheckBox1.Location = New Point(537, 257)
+        CheckBox1.Name = "CheckBox1"
+        CheckBox1.Size = New Size(162, 29)
+        CheckBox1.TabIndex = 8
+        CheckBox1.Text = "show password"
+        CheckBox1.UseVisualStyleBackColor = True
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 450)
+        Controls.Add(CheckBox1)
         Controls.Add(Button3)
         Controls.Add(Button2)
         Controls.Add(Label3)
@@ -128,5 +141,6 @@ Partial Class Form1
     Friend WithEvents Label3 As Label
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
+    Friend WithEvents CheckBox1 As CheckBox
 
 End Class
