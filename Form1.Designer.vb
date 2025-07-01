@@ -4,7 +4,7 @@ Partial Class Form1
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()>
-    Protected Overrides Sub Dispose(disposing As Boolean)
+    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
                 components.Dispose()
@@ -22,125 +22,80 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Label1 = New Label()
-        TextBox1 = New TextBox()
-        TextBox2 = New TextBox()
-        Button1 = New Button()
-        Label2 = New Label()
-        Label3 = New Label()
-        Button2 = New Button()
-        Button3 = New Button()
-        CheckBox1 = New CheckBox()
-        SuspendLayout()
-        ' 
-        ' Label1
-        ' 
-        Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 30F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(290, 27)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(208, 81)
-        Label1.TabIndex = 0
-        Label1.Text = "LOGIN"
-        ' 
-        ' TextBox1
-        ' 
-        TextBox1.Location = New Point(252, 167)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(267, 31)
-        TextBox1.TabIndex = 1
-        ' 
-        ' TextBox2
-        ' 
-        TextBox2.Location = New Point(252, 255)
-        TextBox2.Name = "TextBox2"
-        TextBox2.PasswordChar = "*"c
-        TextBox2.Size = New Size(267, 31)
-        TextBox2.TabIndex = 2
-        ' 
-        ' Button1
-        ' 
-        Button1.Location = New Point(340, 305)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(81, 35)
-        Button1.TabIndex = 3
-        Button1.Text = "sign in"
-        Button1.UseVisualStyleBackColor = True
-        ' 
-        ' Label2
-        ' 
-        Label2.AutoSize = True
-        Label2.Location = New Point(252, 139)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(89, 25)
-        Label2.TabIndex = 4
-        Label2.Text = "username"
-        ' 
-        ' Label3
-        ' 
-        Label3.AutoSize = True
-        Label3.Location = New Point(252, 227)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(87, 25)
-        Label3.TabIndex = 5
-        Label3.Text = "Password"
-        ' 
-        ' Button2
-        ' 
-        Button2.Location = New Point(303, 387)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(161, 35)
-        Button2.TabIndex = 6
-        Button2.Text = "forgot password"
-        Button2.UseVisualStyleBackColor = True
-        ' 
-        ' Button3
-        ' 
-        Button3.Location = New Point(340, 346)
-        Button3.Name = "Button3"
-        Button3.Size = New Size(81, 35)
-        Button3.TabIndex = 7
-        Button3.Text = "sign up"
-        Button3.UseVisualStyleBackColor = True
-        ' 
-        ' CheckBox1
-        ' 
-        CheckBox1.AutoSize = True
-        CheckBox1.Location = New Point(537, 257)
-        CheckBox1.Name = "CheckBox1"
-        CheckBox1.Size = New Size(162, 29)
-        CheckBox1.TabIndex = 8
-        CheckBox1.Text = "show password"
-        CheckBox1.UseVisualStyleBackColor = True
-        ' 
-        ' Form1
-        ' 
-        AutoScaleDimensions = New SizeF(10F, 25F)
-        AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(800, 450)
-        Controls.Add(CheckBox1)
-        Controls.Add(Button3)
-        Controls.Add(Button2)
-        Controls.Add(Label3)
-        Controls.Add(Label2)
-        Controls.Add(Button1)
-        Controls.Add(TextBox2)
-        Controls.Add(TextBox1)
-        Controls.Add(Label1)
-        Name = "Form1"
-        Text = "Form1"
-        ResumeLayout(False)
-        PerformLayout()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnSignIn = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Transparent
+        Me.Button1.BackgroundImage = Global.OMC_UFind.My.Resources.Resources.buttonpink
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Poppins", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.OrangeRed
+        Me.Button1.Location = New System.Drawing.Point(78, 449)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(252, 51)
+        Me.Button1.TabIndex = 14
+        Me.Button1.Text = "Sign Up"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'btnSignIn
+        '
+        Me.btnSignIn.BackColor = System.Drawing.Color.Transparent
+        Me.btnSignIn.BackgroundImage = Global.OMC_UFind.My.Resources.Resources.Blue_Yellow_Minimalist_Happy_Graduation_Canvas_Button__1_
+        Me.btnSignIn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnSignIn.FlatAppearance.BorderSize = 0
+        Me.btnSignIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSignIn.Font = New System.Drawing.Font("Poppins", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSignIn.ForeColor = System.Drawing.Color.White
+        Me.btnSignIn.Location = New System.Drawing.Point(78, 392)
+        Me.btnSignIn.Name = "btnSignIn"
+        Me.btnSignIn.Size = New System.Drawing.Size(252, 51)
+        Me.btnSignIn.TabIndex = 13
+        Me.btnSignIn.Text = "Sign In"
+        Me.btnSignIn.UseVisualStyleBackColor = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.Image = Global.OMC_UFind.My.Resources.Resources.logo_ufind
+        Me.PictureBox1.Location = New System.Drawing.Point(82, 127)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(243, 233)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 12
+        Me.PictureBox1.TabStop = False
+        '
+        'Form1
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.BackColor = System.Drawing.Color.Snow
+        Me.BackgroundImage = Global.OMC_UFind.My.Resources.Resources.front_backround1
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(407, 651)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnSignIn)
+        Me.Controls.Add(Me.PictureBox1)
+        Me.DoubleBuffered = True
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
+        Me.Name = "Form1"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "UFind"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+
     End Sub
-
-    Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents btnSignIn As Button
     Friend WithEvents Button1 As Button
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents CheckBox1 As CheckBox
-
 End Class
